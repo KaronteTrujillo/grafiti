@@ -1,0 +1,10 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["libuuid", "cairo", "pango", "giflib", "librsvg"]
+
+[workflows]
+
+[deployment]
+run = ["sh", "-c", "npm install canvas && node examples/example.js"]
